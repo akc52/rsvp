@@ -3,6 +3,7 @@ import './App.css'; // empty
 import GuestList from './GuestList';
 import Counter from './Counter';
 import Header from './Header';
+import ConfirmedFilter from './ConfirmedFilter';
 
 class App extends Component {
 
@@ -111,11 +112,9 @@ class App extends Component {
       <div className="main">
         <div>
           <h2>Invitees</h2>
-          <label>
-            <input type="checkbox"
-              onChange={this.toggleFilter}
-              checked={this.state.isFiltered} /> Hide those who haven't responded
-          </label>
+          <ConfirmedFilter
+            toggleFilter={this.toggleFilter}
+            isFiltered={this.state.isFiltered}  />
         </div>
         <Counter
           totalInvited={totalInvited}
