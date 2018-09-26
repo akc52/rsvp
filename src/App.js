@@ -110,7 +110,6 @@ class App extends Component {
         handleNameInput={this.handleNameInput} />
       <MainContent
         toggleFilter={this.toggleFilter}
-        isFiltered={this.state.isFiltered}
         totalInvited={totalInvited}
         numberAttending={numberAttending}
         numberUnconfirmed={numberUnconfirmed}
